@@ -6,7 +6,12 @@
 	width: 250px;
 }
 
-body{
+body {
+	background: linear-gradient(90deg, #140f07, #0f234c, #195ab2, #4694ff, #81d8fd);
+}
+
+div{
+	margin: auto;
 	justify-content: center;
 	align-items: center;
 	display: flex;

@@ -8,16 +8,18 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1></h1>
-	<input type="number" placeholder="Combien de joueur pour cette partie?" id="nb_joueur" min="1">
-	<button id="nb_joueur_button">Valider</button>
-	<br>
-	<label for="allumettes" id="allumettes"></label>
-	<br>
-	<input type="number" min="1" max="6" name="allumettes" placeholder="Nombre d'allumettes à enlever" id="nb_allumettes_a_enlever" >
-	<button	id="valider" disabled="true">Valider</button>
-	<br>
-	<p id="nb_restant"></p>
-	<button id="reset" style="display: none"> Rejouer </button>
+	<div>
+		<h1></h1>
+		<input type="number" placeholder="Combien de joueur pour cette partie?" id="nb_joueur" min="1">
+		<button id="nb_joueur_button">Valider</button>
+		<br>
+		<label for="allumettes" id="allumettes"></label>
+		<br>
+		<input type="number" min="1" max="6" name="allumettes" placeholder="Nombre d'allumettes à enlever" id="nb_allumettes_a_enlever" style="display: none">
+		<button	id="valider" style="display: none">Valider</button>
+		<br>
+		<p id="nb_restant"></p>
+		<button id="reset" style="display: none"> Rejouer </button>
+	</div>
 </body>
 </html>
