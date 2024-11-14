@@ -11,16 +11,20 @@ const button = document.querySelector('#valider');
 const nb_joueur_button = document.querySelector('#nb_joueur_button');
 const reset_button = document.querySelector('#reset');
 const nb_restant = document.querySelector('#nb_restant');
+const allumettes = document.querySelector('#nb_allumettes');
 
 nb_joueur_button.addEventListener('click', () => {
 	header.innerText = ""
 	nb_joueur = input_joueur.value
-	button.style.display = "inline-block"
-	input.style.display = "inline-block"
-	nb_joueur_button.style.display = "none"
-	input_joueur.style.display = "none"
-	input_joueur.value = ""
-	label.innerText = `Joueur ${joueur}, à vous de jouer`
+	if (nb_joueur > 0)
+	{
+		button.style.display = "inline-block"
+		input.style.display = "inline-block"
+		nb_joueur_button.style.display = "none"
+		input_joueur.style.display = "none"
+		input_joueur.value = ""
+		label.innerText = `Joueur ${joueur}, à vous de jouer`
+	}
 })
 
 button.addEventListener('click', () => {
@@ -35,7 +39,8 @@ button.addEventListener('click', () => {
 		}
 		else
 		{
-			header.innerText = `Bravo joueur ${joueur}! Vous avez gagner`
+			allumettes.innerText = ""
+			header.innerText = `Bravo joueur ${joueur}! Vous avez gagné`
 			label.innerText = ""
 			nb_restant.innerText = ""
 			input.style.display = "none"
@@ -68,4 +73,9 @@ function update(nb_joueur)
 	else
 		joueur++
 	label.innerText = `Joueur ${joueur}, à vous de jouer`
+	allumettes.innerText = ""
+	for(let i=0; i<nb_allumettes;i++)
+	{
+		allumettes.innerText += " | "
+	}
 }
